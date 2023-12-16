@@ -351,5 +351,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boidPrefab: {fileID: 3383184427659784793, guid: 20cd2447782db8b4dab550bae16038d4, type: 3}
-  boidsCount: 100
+  boidsCount: 4
   spawnArea: {x: 0, y: 0}
