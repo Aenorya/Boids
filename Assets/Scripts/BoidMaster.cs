@@ -8,7 +8,7 @@ public class BoidMaster : MonoBehaviour
     public static BoidMaster Master;
     public static List<Boid> boids = new List<Boid>();
     public static Vector3 flockCenter;
-    public  Mode flockCohesion = Mode.Optimized;
+    public  Mode flockCohesion = Mode.Performant;
 
     [SerializeField] private Boid boidPrefab;
     [SerializeField] private int boidsCount;
@@ -24,7 +24,7 @@ public class BoidMaster : MonoBehaviour
         {
             randX = Random.Range(0, spawnArea.x) - spawnArea.x / 2;
             randY = Random.Range(0, spawnArea.y) - spawnArea.y / 2;
-            randR = Random.Range(-180, 180);
+            randR = Random.Range(-90, 90);
             Boid boid = Instantiate(boidPrefab,
                 new Vector3(randX, randY, 0),
                 Quaternion.Euler(0, 0,randR));
@@ -53,6 +53,6 @@ public class BoidMaster : MonoBehaviour
 
 public enum Mode
 {
-    Optimized,
+    Performant,
     Precise
 }
